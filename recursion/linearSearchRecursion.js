@@ -36,6 +36,25 @@ function returnTypeArrayList(arr, tar, index, tempArr){
     return returnTypeArrayList(arr, tar, index + 1, tempArr)
 }
 
+function returnArrayList(arr, tar, index){
+    let newArray = [];
 
-console.log(returnTypeArrayList([1,4,6,7,6,96,234,45,23],6 , 0,[]));
-console.log(arrResult);
+    if(index == arr.length){
+        return newArray;
+    }
+
+    if(arr[index] == tar){
+        newArray.push(index);
+    }
+
+    let arrN = returnArrayList(arr,tar, index + 1);
+
+    if(arrN.length > 0){
+        newArray.push(arrN);
+    }
+    return newArray.flat();
+}
+
+
+console.log(returnArrayList([1,4,6,7,6,96,234,45,23],6 , 0));
+// console.log(arrResult);
