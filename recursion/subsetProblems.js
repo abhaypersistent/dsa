@@ -49,6 +49,42 @@ function subSequenceWithAscii(str,upStr){
     subSequenceWithAscii(str + n , upStr.substring(1));
 }
 
+function subsetInterative(arr){
+    let newArray = [[]];
+    for (const key in arr) {
+        let n = newArray.length;
+        let currentNumber = arr[key];
+        for (let i = 0; i < n; i++) {
+            let currentSubset = newArray[i];
+            newArray.push(currentSubset.concat(currentNumber));
+        }
+    }
+    return newArray;
+}
+
+function subsetInterativeDuplicate(arr){
+    let newArray = [[]];
+    arr.sort();
+    console.log(arr);
+    let start = 0;
+    let end = 0;
+    for (const key in arr) {
+        start = 0;
+        // if my curreent andprevious is same start = end + 1'
+        if(key > 0 && arr[key] == arr[key - 1]){
+            start = end + 1;
+        }
+        end = newArray.length - 1;
+        let n = newArray.length;
+        let currentNumber = arr[key];
+        for (let i = start; i < n; i++) {
+            let currentSubset = newArray[i];
+            newArray.push(currentSubset.concat(currentNumber));
+        }
+    }
+    return newArray;
+}
+
 
     
-    console.log(subSequenceWithAscii('' , 'abc'));
+    console.log(subsetInterativeDuplicate([2,1,2,3,4,3]));
