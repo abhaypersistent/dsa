@@ -16,4 +16,6 @@ function recursionBinarySearch(arr, target, start, end){
     return recursionBinarySearch(arr, target, middle + 1, end);
 }
 
-console.log(recursionBinarySearch([1,4,6,8,10,12,16,18,20,22,24], 24, 0, 10));
+// function binarySearchRex(arr, tar, start, end)
+let arr = [-1,0,3,5,9,12];
+console.log(recursionBinarySearch(arr, 9, 0, arr.length - 1));
