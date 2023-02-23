@@ -55,4 +55,4 @@ function permutationRecCount(p,unprocessed){
 
 }
 
-console.log(permutationRecCount('','abcdef'));
+console.log(permutationRec('','abcdef'));

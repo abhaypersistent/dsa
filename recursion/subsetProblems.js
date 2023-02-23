@@ -87,4 +87,4 @@ function subsetInterativeDuplicate(arr){
 
 
     
-    console.log(subsetInterativeDuplicate([2,1,2,3,4,3]));
+    console.log(subSequence('','abc'));
