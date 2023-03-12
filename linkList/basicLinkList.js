@@ -193,11 +193,26 @@ const zipperRec = (l1,l2) => {
     l2.next = zipperRec(n1,n2);
 
     // zipperRec(n1,n2);
-
     return l1;
+}
 
+const reverseWithSpecific = (l1, right, left) => {
+    let counter = 1;
+    let current = l1;
+    let prev = null;
+    while (current !== null) {
+        if(counter >= right && counter <= left){
+            const next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        counter += 1;
+    }
+
+    return prev;
 }
 
 // printLinkList(a);
 // console.log(sumLinkListRec(a));
-console.log(printLinkList(zipperRec(a,a1)));
+console.log(printLinkList(reverseWithSpecific(a,1,2)));
