@@ -52,5 +52,8 @@ function fun(w, wt, val, n, t) {
     }
 }
 
-console.log(recursiveKnapsak(arrItem, weightArr, maxWeight, 4));
+// console.log(recursiveKnapsak(arrItem, weightArr, maxWeight, 4));
 console.log(knapSack(maxWeight, weightArr, arrItem, 4));
+
+
+// top down method
