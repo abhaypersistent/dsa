@@ -1,12 +1,12 @@
 // stack for example :- stack overflow
 //LIFO : last out first
 // First inserted last out
+// FILO : First in last off
 // Insert on the top 
 // pop and Push
 // Queue : first in first out
 // FIFO : first in first out
-// 
-
+// LILO : Last in last out
 
 class CustomStack {
     constructor(){
