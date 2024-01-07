@@ -39,7 +39,6 @@ function permutationRecArr(p,unprocessed){
 
 function permutationRecCount(p,unprocessed){
     if(unprocessed.length == 0){
-        
         return 1;
     }
 
