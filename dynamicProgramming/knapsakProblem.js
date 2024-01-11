@@ -14,6 +14,8 @@
 // maximum profit
 // base condition:- think of the smallest of the valid i/p
 // smaller input for recursion 
+
+// RECURSIVE + STORAGE : tOP dOWN SOLUTION
 let arrItem = [1,3,4,5];
 let weightArr = [1,4,5,7];
 let maxWeight = 7;
@@ -23,7 +25,7 @@ function recursiveKnapsak(itemArr, weighArr, weight, n){
     }
 
     if(weighArr[n - 1] <= weight){
-        return Math.max(weighArr[n - 1] + recursiveKnapsak(itemArr, weighArr, weight - weighArr[n - 1], n - 1),recursiveKnapsak(itemArr, weighArr, weight, n - 1));
+        return Math.max(itemArr[n - 1] + recursiveKnapsak(itemArr, weighArr, weight - weighArr[n - 1], n - 1),recursiveKnapsak(itemArr, weighArr, weight, n - 1));
     }else {
         return recursiveKnapsak(itemArr, weighArr, weight, n - 1);
     }
