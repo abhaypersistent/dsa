@@ -24,4 +24,18 @@ function fibnMemo(n, memo ={}){
     memo[n] = fibnMemo(n - 1, memo) + fibnMemo(n - 2, memo);
     return memo[n]; 
 }
-console.log(fibnMemo(50));
+
+
+const fibTab = (n) => {
+    // O(n) space
+    // O(n) time
+    const table = Array(n + 1).fill(0);
+    table[1] = 1;
+    for (let i = 0; i <= n; i++) {
+        table[i+1] += table[i];
+        table[i+2] += table[i];
+    }
+    return table[n];
+}
+// console.log(fibnMemo(50));
+console.log(fibTab(50));
